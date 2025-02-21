@@ -1,7 +1,7 @@
 resource "null_resource" "db_setup" {
   triggers = {
     db_instance = aws_db_instance.postgresql.id
-    
+
   }
 
   provisioner "local-exec" {
