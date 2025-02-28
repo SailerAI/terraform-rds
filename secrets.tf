@@ -23,7 +23,7 @@ resource "aws_secretsmanager_secret" "db_host" {
 
 resource "aws_secretsmanager_secret_version" "db_host" {
   secret_id     = aws_secretsmanager_secret.db_host.id
-  secret_string = aws_db_instance.postgresql.endpoint
+  secret_string = aws_db_instance.postgresql.address
 }
 
 
