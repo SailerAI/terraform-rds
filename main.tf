@@ -19,7 +19,7 @@ resource "aws_db_instance" "postgresql" {
   skip_final_snapshot          = var.skip_final_snapshot
   final_snapshot_identifier    = var.skip_final_snapshot ? null : format("%s-%s-final-snapshot", var.project_name, var.environment)
   performance_insights_enabled = var.performance_insights_enabled
-  storage_encrypted            = var.torage_encrypted
+  storage_encrypted            = var.storage_encrypted
   # Tags opcionais para organização
   tags = {
     Environment = var.environment

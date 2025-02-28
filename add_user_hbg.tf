@@ -1,5 +1,5 @@
 resource "null_resource" "db_setup" {
-  depends_on = [ aws_db_instance.postgresql ]
+  depends_on = [aws_db_instance.postgresql]
   triggers = {
     db_instance = aws_db_instance.postgresql.id
 
